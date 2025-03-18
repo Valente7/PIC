@@ -1,0 +1,117 @@
+.header {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../imgs/EletroCapa.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, $white 0%, rgba($primary, .35) 99%, rgba($primary, .5) 100%);
+    }
+
+    .header-content {
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        //margin-top: 20px;
+        flex-grow: 1;
+        //max-width: 650px;
+        //justify-content: center;
+        /* Centraliza os itens horizontalmente */
+
+        .header-title {
+
+            .up {
+                font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1300 - 300)));
+                font-weight: 500;
+                color: #444;
+                margin-bottom: 5px;
+                position: relative;
+                display: block;
+            }
+
+            .down {
+                font-size: calc(30px + (75 - 30) * ((100vw - 300px) / (1300 - 300)));
+                margin-bottom: 0;
+                position: relative;
+                display: block;
+                //display: inline-block; // Alteração para inline-block
+                //white-space: nowrap; // Impede que o texto quebre em várias linhas
+                //text-align: center; // Alinha o texto ao centro
+            }
+        }
+
+        .header-subtitle {
+            font-size: calc(10px + (22 - 10) * ((100vw - 300px) / (1300 - 300)));
+            letter-spacing: calc(1px + (7 - 1) * ((100vw - 300px) / (1300 - 300)));
+            opacity: .8;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            //display: inline-block; // Alteração para inline-block
+            //white-space: nowrap; // Impede que o texto quebre em várias linhas
+            //text-align: center; // Alinha o texto ao centro
+        }
+
+        .btn {
+            position: relative;
+            margin-top: 20px;
+            border-radius: 20px;
+            padding: 8px 15px;
+        }
+
+
+    }
+
+    // header title
+    &-title {
+        font-size: 2.4rem;
+        font-weight: bold;
+        opacity: .8;
+        color: $body-color;
+    }
+
+    // header mini
+    &-mini {
+        min-height: 9rem;
+        height: 9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+        background: lighten($primary, 50%);
+    }
+
+    &-minimini {
+        min-height: 7rem;
+        height: 7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+        background: lighten($primary, 100%);
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .header {
+        background-size: cover;
+    }
+
+    .header-content {
+        //padding-left: calc(100% / 5) !important;
+    }
+}
