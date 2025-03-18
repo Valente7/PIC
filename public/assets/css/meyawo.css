@@ -9904,7 +9904,7 @@ pre .code {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../imgs/EletroCapa.webp);
+  background-image: url('/assets/imgs/EletroCapa.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
